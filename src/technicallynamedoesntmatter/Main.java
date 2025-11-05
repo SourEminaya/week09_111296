@@ -1,14 +1,21 @@
 package technicallynamedoesntmatter;
 
 public class Main {
+	
+	public static void displayInfo(Smartphone smartphone) {
+		System.out.println("Device info: Brand: "+smartphone.getBrand()+", Model: "+smartphone.getModel());
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Car myCar= new Car("Honda Civic");
-		myCar.showVehicleInfo();
-		myCar.start();
-		myCar.stop();
-		
+		Smartphone samsoong= new Smartphone("Samsung", "Galaxy S21");
+		displayInfo(samsoong);
+		samsoong.turnOn();
+		samsoong.increaseVolume(5);
+		samsoong.dereaseVolume(3);
+		samsoong.connectToWifi("HomeNetwork");
+		samsoong.disconnectFromWifi();
+		samsoong.turnOff();
+
 	}
 
 }
